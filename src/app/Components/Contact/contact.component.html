@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Contact Me</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="aboutcss">
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Get in Touch</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <p>If you would like to get in touch, feel free to send me a message through the form below.</p>
+
+            <ion-list>
+                <ion-item>
+                    <ion-label position="floating">Your Name</ion-label>
+                    <ion-input [(ngModel)]="name" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Your Email</ion-label>
+                    <ion-input [(ngModel)]="email" type="email"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Your Message</ion-label>
+                    <ion-textarea [(ngModel)]="message"></ion-textarea>
+                </ion-item>
+            </ion-list>
+
+            <ion-button expand="full" (click)="sendMessage()">Send Message</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
