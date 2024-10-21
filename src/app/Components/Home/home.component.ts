@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/Services/theme.service';
 
 @Component({
     selector: 'app-home',
@@ -7,16 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-    toggle: boolean;
-
 
     constructor() { }
 
-
-
-    ngOnInit() { }
-
-
-
+    ngOnInit() {
+    }
 
 }

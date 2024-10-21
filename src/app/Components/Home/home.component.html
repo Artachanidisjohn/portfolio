@@ -1,32 +1,33 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title style="text-align: center;">Welcome at my Portofolio</ion-title>
-    </ion-toolbar>
-</ion-header>
+<ion-app>
+    <div
+        style="text-align: center; padding: 50px 20px; background-color: var(--background-color); color: var(--text-color);">
+        <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 20px;">Hey, I'm Ioannis Artachanidis</h1>
+        <p style="font-size: 18px; max-width: 800px; margin: 0 auto 30px;">
+            A Full Stack Developer building modern web applications that deliver excellent user experiences.
+        </p>
 
-<ion-content class="ion-padding">
-    <div class="hero-section">
-        <h1>Hey, I'm Ioannis Artachanidis</h1>
-        <p>A Full Stack Developer building modern web applications that deliver excellent user experiences.</p>
-
-        <div class="hero-buttons">
-            <ion-button href="/about">About</ion-button>
-            <ion-button href="/projects">Projects</ion-button>
-            <ion-button href="/contact">Contact</ion-button>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <ion-button href="/about"
+                style="--background: #4caf50; --border-radius: 5px; --padding: 10px 20px;">About</ion-button>
+            <ion-button href="/projects"
+                style="--background: #2196f3; --border-radius: 5px; --padding: 10px 20px;">Projects</ion-button>
+            <ion-button href="/contact"
+                style="--background: #f44336; --border-radius: 5px; --padding: 10px 20px;">Contact</ion-button>
         </div>
     </div>
-    <ion-grid class="social-icons">
-        <ion-row>
+
+    <ion-grid style="padding: 20px; text-align: center;">
+        <ion-row style="justify-content: center;">
             <ion-col size="auto">
-                <ion-icon name="logo-linkedin" size="large"></ion-icon>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
+                </a>
             </ion-col>
             <ion-col size="auto">
-                <ion-icon name="logo-github" size="large"></ion-icon>
+                <a href="https://www.github.com" target="_blank">
+                    <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
             </ion-col>
         </ion-row>
     </ion-grid>
-
-
-
-
-</ion-content>
+</ion-app>

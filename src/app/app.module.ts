@@ -9,18 +9,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './Components/About/about.component';
 import { HomeComponent } from './Components/Home/home.component';
-import { SkillsComponent } from './Components/Skills/skills.component';
 import { ContactComponent } from './Components/Contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ThemeToggleComponent } from './Components/Theme-Toggle/theme-toggle.component';
 @NgModule({
-  declarations: [AppComponent, AboutComponent, HomeComponent, SkillsComponent, ContactComponent],
+  declarations: [AppComponent, AboutComponent, HomeComponent, ContactComponent, ThemeToggleComponent],
   imports:
     [
-      BrowserModule, 
+      BrowserModule,
       IonicModule.forRoot(),
-       AppRoutingModule, 
-      BrowserAnimationsModule, 
+      AppRoutingModule,
+      BrowserAnimationsModule,
       FormsModule,
       HttpClientModule,
     ],
