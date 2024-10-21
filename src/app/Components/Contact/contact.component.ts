@@ -11,17 +11,12 @@ import { ThemeService } from "src/app/Services/theme.service";
 })
 export class ContactComponent {
 
-<<<<<<< HEAD
-    apiUrl = 'http://localhost:3100';
-    // apiUrl = 'http://portfolio-api-ten-ochre.vercel.app';
-=======
 
     // apiUrl = 'http://localhost:3100';
 
     apiUrl = 'https://portfolio-api-ten-ochre.vercel.app';
 
 
->>>>>>> b8efdc236124f425ed46dd8d5dbe23535caf9ea9
 
     name: string = '';
     email: string = '';
