@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
+import { Subscription } from "rxjs";
+import { ThemeService } from "src/app/Services/theme.service";
 
 @Component({
     selector: 'app-contact',
@@ -9,27 +11,38 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent {
 
-
-    apiUrl = 'http://localhost:3100';
-    
-    // apiUrl = 'https://portfolio-angular-ionic-node-js-kvo6-k0pzp7vzf.vercel.app';
-
-
+    // apiUrl = 'http://localhost:3100';
+    apiUrl = 'http://portfolio-api-ten-ochre.vercel.app';
 
     name: string = '';
     email: string = '';
     message: string = '';
+    messageSent: boolean = false;
+    displayMessage: string = '';
+
+    isDarkMode: boolean;
+    themeSubscription: Subscription;
+
 
     constructor(
         private router: Router,
-        private http: HttpClient
-    ) { }
+        private http: HttpClient,
+        private themeService: ThemeService,
+    ) {
+
+    }
+
+    ngOnInit() {
+        this.themeSubscription = this.themeService.getTheme().subscribe((isDarkMode: boolean) => {
+            this.isDarkMode = isDarkMode;
+        });
+    }
+
 
 
     goBack() {
         this.router.navigate(['/']);
     }
-
 
     sendMessage() {
         if (this.name && this.email && this.message) {
@@ -39,10 +52,14 @@ export class ContactComponent {
                 message: this.message,
             };
 
-
             this.http.post(`${this.apiUrl}/send-email`, formData).subscribe(
                 (response) => {
                     console.log('Email sent successfully', response);
+                    this.messageSent = true;
+                    this.displayMessage = 'Το email στάλθηκε επιτυχως!';
+                    setTimeout(() => {
+                        this.router.navigate(['/']);
+                    }, 1200)
                 },
                 (error) => {
                     console.error('Error sending email', error);
@@ -53,6 +70,10 @@ export class ContactComponent {
         }
     }
 
+    ngOnDestroy() {
+        if (this.themeSubscription) {
+            this.themeSubscription.unsubscribe();
+        }
+    }
+
 }
-
-
