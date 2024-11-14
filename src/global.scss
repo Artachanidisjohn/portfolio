@@ -33,8 +33,13 @@
 body {
     --background-color: #ffffff;
     --text-color: #000000;
+<<<<<<< HEAD
     --header-background: #f5f5f5;
     --header-text-color: #000000;
+=======
+    // --header-background: #f5f5f5;
+    // --header-text-color: #000000;
+>>>>>>> 2bd1a5e0b2fc0ddf5a88ab15b68dd0afd29b1dd7
     --button-background: #2196f3;
     --button-text-color: #ffffff;
     --link-color: #0077b5;
@@ -45,15 +50,22 @@ body {
 body.dark-theme {
     --background-color: #121212;
     --text-color: #ffffff;
+<<<<<<< HEAD
     --header-background: #1f1f1f;
     --header-text-color: #ffffff;
     --button-background: #4caf50;
+=======
+    // --header-background: #1f1f1f;
+    // --header-text-color: #ffffff;
+    // --button-background: #4caf50;
+>>>>>>> 2bd1a5e0b2fc0ddf5a88ab15b68dd0afd29b1dd7
     --button-text-color: #000000;
     --link-color: #00aced;
     --icon-color: #ffffff;
 }
 
 
+<<<<<<< HEAD
 /* Apply Variables Across Components */
 ion-app {
     background-color: var(--background-color);
@@ -71,6 +83,13 @@ ion-button {
     --color: var(--button-text-color);
 }
 
+=======
+ion-button {
+    --background: var(--button-background);
+    --color: var(--button-text-color);
+}
+
+>>>>>>> 2bd1a5e0b2fc0ddf5a88ab15b68dd0afd29b1dd7
 a {
     color: var(--link-color);
 }
@@ -95,4 +114,18 @@ ion-content {
     --background: var(--background-color);
     background-color: var(--background-color);
     color: var(--text-color);
+<<<<<<< HEAD
 }
+=======
+}
+
+
+ion-app {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+
+>>>>>>> 2bd1a5e0b2fc0ddf5a88ab15b68dd0afd29b1dd7
