@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './Components/About/about.component';
 import { HomeComponent } from './Components/Home/home.component';
 import { ContactComponent } from './Components/Contact/contact.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ThemeToggleComponent } from './Components/Theme-Toggle/theme-toggle.component';
 @NgModule({
@@ -23,6 +23,7 @@ import { ThemeToggleComponent } from './Components/Theme-Toggle/theme-toggle.com
       BrowserAnimationsModule,
       FormsModule,
       HttpClientModule,
+      ReactiveFormsModule,
     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

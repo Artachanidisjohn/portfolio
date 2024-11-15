@@ -1,38 +1,32 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ThemeService } from 'src/app/Services/theme.service';
 
 @Component({
     selector: 'app-theme-toggle',
     template: `
-    <ion-toggle [checked]="isDarkMode" (ionChange)="onToggle($event)"
-                style="--handle-background: {{isDarkMode ? '#ffffff' : '#2196f3'}};">
-    </ion-toggle>
+    <ion-button (click)="onToggle()" fill="clear" 
+                [title]="isDarkMode ? 'change to bright theme' : 'change to dark theme'">
+        <ion-icon [name]="isDarkMode ? 'sunny' : 'moon'" size="large"></ion-icon>
+    </ion-button>
   `,
 })
-export class ThemeToggleComponent {
+export class ThemeToggleComponent implements OnInit, OnDestroy {
 
     isDarkMode: boolean;
     themeSubscription: Subscription;
 
-    constructor(
-        private themeService: ThemeService,
-    ) {
+    constructor(private themeService: ThemeService) { }
 
+    ngOnInit() {
         this.themeSubscription = this.themeService.getTheme().subscribe((isDarkMode: boolean) => {
             this.isDarkMode = isDarkMode;
         });
     }
 
-
-    onToggle(event: any) {
-        const isChecked = event.detail.checked;
-        if (isChecked !== this.isDarkMode) {
-            this.themeService.toggleTheme();
-        }
+    onToggle() {
+        this.themeService.toggleTheme();
     }
-
 
     ngOnDestroy() {
         if (this.themeSubscription) {

@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from "rxjs";
 import { ThemeService } from "src/app/Services/theme.service";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
     selector: 'app-contact',
@@ -12,11 +13,10 @@ import { ThemeService } from "src/app/Services/theme.service";
 export class ContactComponent {
 
     // apiUrl = 'http://localhost:3100';
-    apiUrl = 'http://portfolio-api-ten-ochre.vercel.app';
+    apiUrl = 'https://portfolio-api-ten-ochre.vercel.app';
 
-    name: string = '';
-    email: string = '';
-    message: string = '';
+    userForm!: FormGroup;
+
     messageSent: boolean = false;
     displayMessage: string = '';
 
@@ -28,6 +28,7 @@ export class ContactComponent {
         private router: Router,
         private http: HttpClient,
         private themeService: ThemeService,
+        private fb: FormBuilder
     ) {
 
     }
@@ -36,6 +37,15 @@ export class ContactComponent {
         this.themeSubscription = this.themeService.getTheme().subscribe((isDarkMode: boolean) => {
             this.isDarkMode = isDarkMode;
         });
+
+
+        this.userForm = this.fb.group({
+            name: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            message: ['', [Validators.required]]
+        });
+
+
     }
 
 
@@ -45,30 +55,27 @@ export class ContactComponent {
     }
 
     sendMessage() {
-        if (this.name && this.email && this.message) {
-            const formData = {
-                name: this.name,
-                email: this.email,
-                message: this.message,
-            };
+        if (this.userForm.valid) {
+            const formData = this.userForm.value;
 
             this.http.post(`${this.apiUrl}/send-email`, formData).subscribe(
                 (response) => {
                     console.log('Email sent successfully', response);
                     this.messageSent = true;
-                    this.displayMessage = 'Το email στάλθηκε επιτυχως!';
+                    this.displayMessage = 'Το email στάλθηκε επιτυχώς!';
                     setTimeout(() => {
                         this.router.navigate(['/']);
-                    }, 1200)
+                    }, 1200);
                 },
                 (error) => {
                     console.error('Error sending email', error);
                 }
             );
         } else {
-            console.log('Please fill in all fields');
+            console.log('Please fill in all fields correctly');
         }
     }
+
 
     ngOnDestroy() {
         if (this.themeSubscription) {

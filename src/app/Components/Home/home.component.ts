@@ -14,4 +14,10 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
     }
 
+
+    redirectToProject() {
+        window.open("https://artachanidis-john-delivery-app.vercel.app/", "_blank");
+    }
+
+
 }
