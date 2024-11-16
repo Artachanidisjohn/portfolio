@@ -10,8 +10,6 @@ import { Subscription } from 'rxjs';
 export class AppComponent {
   isDarkMode = false;
   themeSubscription: Subscription;
-  titleColor: string;
-
 
   constructor(private themeService: ThemeService) {
     this.themeSubscription = this.themeService.getTheme().subscribe((isDarkMode: boolean) => {
@@ -22,16 +20,10 @@ export class AppComponent {
 
   toggleTheme(event: any) {
     this.themeService.toggleTheme();
-    this.updateTitleColor();
-
   }
 
   setTheme(isDarkMode: boolean) {
     document.body.classList.toggle('dark-theme', isDarkMode);
-  }
-
-  updateTitleColor() {
-    this.titleColor = this.isDarkMode ? '#ffffff' : '#000000'; // Λευκό για dark, μαύρο για light
   }
 
   ngOnDestroy() {

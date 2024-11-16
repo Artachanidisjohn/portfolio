@@ -26,6 +26,25 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+body:not(.dark-theme) ion-title {
+    color: #000;
+}
+
+body.dark-theme ion-title {
+    color: #fff;
+}
+
+/* Light Theme Variables */
+body {
+    --header-text-color: #000000;
+    /* Μαύρο κείμενο για λευκό θέμα */
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --header-text-color: #ffffff;
+    /* Λευκό κείμενο για σκοτεινό θέμα */
+}
 
 
 
