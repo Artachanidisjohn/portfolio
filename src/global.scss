@@ -26,25 +26,6 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
-body:not(.dark-theme) ion-title {
-    color: #000;
-}
-
-body.dark-theme ion-title {
-    color: #fff;
-}
-
-/* Light Theme Variables */
-body {
-    --header-text-color: #000000;
-    /* Μαύρο κείμενο για λευκό θέμα */
-}
-
-/* Dark Theme Variables */
-body.dark-theme {
-    --header-text-color: #ffffff;
-    /* Λευκό κείμενο για σκοτεινό θέμα */
-}
 
 
 
@@ -53,11 +34,9 @@ body {
     --background-color: #ffffff;
     --text-color: #000000;
     --header-background: #f5f5f5;
+    /* Λευκό header */
     --header-text-color: #000000;
-    --button-background: #2196f3;
-    --button-text-color: #ffffff;
-    --link-color: #0077b5;
-    --icon-color: #000000;
+    /* Μαύρο κείμενο */
 }
 
 /* Dark Theme Variables */
@@ -65,11 +44,16 @@ body.dark-theme {
     --background-color: #121212;
     --text-color: #ffffff;
     --header-background: #1f1f1f;
+    /* Σκούρο header */
     --header-text-color: #ffffff;
-    --button-background: #4caf50;
-    --button-text-color: #000000;
-    --link-color: #00aced;
-    --icon-color: #ffffff;
+    /* Λευκό κείμενο */
+}
+
+
+
+ion-title {
+    color: var(--header-text-color);
+    /* Τίτλος */
 }
 
 
