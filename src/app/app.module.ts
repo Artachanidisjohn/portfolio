@@ -14,8 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ThemeToggleComponent } from './Components/Theme-Toggle/theme-toggle.component';
 import { ProjectsComponent } from './Components/Projects/project.component';
+import { CvComponent } from './Components/Cv/cv.component';
 @NgModule({
-  declarations: [AppComponent, AboutComponent, HomeComponent, ContactComponent, ThemeToggleComponent, ProjectsComponent],
+  declarations: [AppComponent, AboutComponent, HomeComponent, ContactComponent, ThemeToggleComponent, ProjectsComponent, CvComponent],
   imports:
     [
       BrowserModule,
