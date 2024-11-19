@@ -1,0 +1,29 @@
+ion-toolbar {
+    --background: var(--ion-toolbar-background, #ffffff);
+    --color: var(--ion-toolbar-color, #000000);
+}
+
+ion-card {
+    margin: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--ion-card-border-color, #2196f3);
+}
+
+ion-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ion-card-content {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+ion-button {
+    margin-top: 10px;
+}
+
+
+ion-card-title {
+    color: var(--header-text-color);
+}

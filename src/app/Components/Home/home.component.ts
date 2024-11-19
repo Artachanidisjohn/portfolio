@@ -15,9 +15,7 @@ export class HomeComponent implements OnInit {
     }
 
 
-    redirectToProject() {
-        window.open("https://artachanidis-john-delivery-app.vercel.app/", "_blank");
-    }
+
 
 
 }
