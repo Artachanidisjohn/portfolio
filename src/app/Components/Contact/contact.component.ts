@@ -62,7 +62,7 @@ export class ContactComponent {
                 (response) => {
                     console.log('Email sent successfully', response);
                     this.messageSent = true;
-                    this.displayMessage = 'Το email στάλθηκε επιτυχώς!';
+                    this.displayMessage = 'The email was sent successfully!';
                     setTimeout(() => {
                         this.router.navigate(['/']);
                     }, 1200);
