@@ -29,7 +29,8 @@
                                 </ion-item>
                                 <ion-text color="danger">
                                     <small
-                                        *ngIf="userForm.get('name')?.errors?.['required'] && userForm.get('name')?.dirty">Το
+                                        *ngIf="userForm.get('name')?.invalid && (userForm.get('name')?.dirty || userForm.get('name')?.touched)">
+                                        Το
                                         πεδίο
                                         είναι υποχρεωτικό.</small>
                                 </ion-text>
@@ -45,7 +46,7 @@
                                 </ion-item>
                                 <ion-text color="danger">
                                     <li
-                                        *ngIf="userForm.get('email')?.errors?.['required'] && userForm.get('email')?.dirty">
+                                        *ngIf="userForm.get('email')?.errors?.['required'] && (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
                                         <small>Το email είναι υποχρεωτικό.</small>
                                     </li>
                                     <li *ngIf="userForm.get('email')?.errors?.['email']">
@@ -60,6 +61,12 @@
                                 Message</ion-label>
                             <ion-textarea formControlName="message"></ion-textarea>
                         </ion-item>
+                        <ion-text color="danger">
+                            <small
+                                *ngIf="userForm.get('message')?.invalid && (userForm.get('message')?.dirty || userForm.get('message')?.touched)">
+                                Το πεδίο είναι υποχρεωτικό.
+                            </small>
+                        </ion-text>
                     </ion-grid>
 
                     <ion-button expand="full" type="submit"

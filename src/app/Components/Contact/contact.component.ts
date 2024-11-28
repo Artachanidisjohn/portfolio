@@ -22,7 +22,7 @@ export class ContactComponent {
 
     isDarkMode: boolean;
     themeSubscription: Subscription;
-
+    showErrors = false;
 
     constructor(
         private router: Router,
@@ -46,7 +46,13 @@ export class ContactComponent {
         });
 
 
+        this.userForm.valueChanges.subscribe(() => {
+            if (this.userForm.valid) {
+                this.showErrors = false;
+            }
+        });
     }
+
 
 
 
@@ -72,7 +78,11 @@ export class ContactComponent {
                 }
             );
         } else {
-            console.log('Please fill in all fields correctly');
+            Object.keys(this.userForm.controls).forEach((field) => {
+                const control = this.userForm.get(field);
+                control?.markAsTouched({ onlySelf: true });
+            });
+
         }
     }
 
