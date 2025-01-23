@@ -23,7 +23,7 @@ export class ThemeService {
     }
 
     getTheme() {
-        return this.isDarkMode.asObservable(); // Επιστρέφουμε Observable για το theme
+        return this.isDarkMode.asObservable(); 
     }
 
     private applyTheme(isDarkMode: boolean) {

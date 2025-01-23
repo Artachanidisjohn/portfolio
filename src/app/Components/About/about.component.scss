@@ -1,27 +1,20 @@
-/* Light Theme Variables */
 body {
     --background-color: #ffffff;
     --text-color: #000000;
     --header-background: #f5f5f5;
-    /* Λευκό header */
     --header-text-color: #000000;
-    /* Μαύρο κείμενο */
 }
 
-/* Dark Theme Variables */
 body.dark-theme {
     --background-color: #121212;
     --text-color: #ffffff;
     --header-background: #1f1f1f;
-    /* Σκούρο header */
     --header-text-color: #ffffff;
-    /* Λευκό κείμενο */
 }
 
 
 ion-title {
     color: var(--header-text-color);
-    /* Τίτλος */
 }
 
 

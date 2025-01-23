@@ -32,7 +32,7 @@ export class AboutComponent implements OnInit {
 
     ngOnDestroy() {
         if (this.themeSubscription) {
-            this.themeSubscription.unsubscribe(); // Καθαρισμός της εγγραφής όταν το component καταστρέφεται
+            this.themeSubscription.unsubscribe(); 
         }
     }
 }
