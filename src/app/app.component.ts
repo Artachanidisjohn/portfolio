@@ -24,8 +24,6 @@ export class AppComponent {
 
   setTheme(isDarkMode: boolean) {
     document.body.classList.toggle('dark-theme', isDarkMode);
-    console.log('Dark theme applied:', isDarkMode); // Debug log
-
   }
 
   ngOnDestroy() {

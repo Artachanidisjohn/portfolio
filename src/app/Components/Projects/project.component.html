@@ -1,27 +1,40 @@
 <ion-app>
-    <ion-header>
-        <ion-toolbar>
-            <ion-buttons slot="start">
-                <ion-back-button defaultHref="/"></ion-back-button>
-            </ion-buttons>
-            <ion-title>My Projects</ion-title>
-        </ion-toolbar>
-    </ion-header>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>My Projects</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-    <ion-grid>
-        <div class="projects-list">
-            <ion-card>
-                <ion-card-header>
-                    <ion-card-title>Delivery App</ion-card-title>
-                </ion-card-header>
-                <ion-card-content>
-                    A food delivery application developed with Angular, Ionic, and Node.js, featuring user
-                    authentication for secure login and registration.The application uses a PostgreSQL database to
-                    manage user data, orders, and cart items. Users can order pizzas and drinks, view special offers,
-                    and manage their cart.
-                </ion-card-content>
-                <ion-button (click)="redirectToProject()">Visit Project</ion-button>
-            </ion-card>
-        </div>
-    </ion-grid>
+  <ion-grid>
+    <div class="projects-list">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Delivery App</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Full-stack budget and expense tracking application with authentication
+          and analytics. Users can securely register and log in, manage daily
+          expenses (add/edit/delete), filter and search by category, export data
+          to CSV, and define a monthly budget limit with visual progress
+          indicators. The application provides insights such as total spending,
+          average per day, top expenses, and category distribution through
+          interactive charts. Built with a mobile-first approach and responsive
+          UI. Backend implemented in .NET with a REST API, handling
+          authentication, business logic, and data persistence.
+        </ion-card-content>
+        <ion-button (click)="redirectToProjectA()">Visit Project</ion-button>
+        <ion-card-content>
+          A food delivery application developed with Angular, Ionic, and
+          Node.js, featuring user authentication for secure login and
+          registration.The application uses a PostgreSQL database to manage user
+          data, orders, and cart items. Users can order pizzas and drinks, view
+          special offers, and manage their cart.
+        </ion-card-content>
+        <ion-button (click)="redirectToProjectB()">Visit Project</ion-button>
+      </ion-card>
+    </div>
+  </ion-grid>
 </ion-app>
