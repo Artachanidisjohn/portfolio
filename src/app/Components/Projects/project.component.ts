@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
-  redirectToProjectA() {
+  redirectToBudgetApp() {
     window.open('https://my-budget-overview.vercel.app/', '_blank');
   }
-  redirectToProjectB() {
+  redirectToDeliveryApp() {
     window.open('https://artachanidis-john-delivery-app.vercel.app/', '_blank');
   }
 }
