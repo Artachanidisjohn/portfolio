@@ -10,27 +10,63 @@
 
   <ion-grid>
     <div class="projects-list">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Budget & Expense Tracker</ion-card-title>
-        </ion-card-header>
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>Budget & Expense Tracker</ion-card-title>
+  </ion-card-header>
 
-        <ion-card-content>
-          Full-stack budget and expense tracking application with authentication
-          and analytics. Users can securely register and log in, manage daily
-          expenses (add/edit/delete), filter and search by category, export data
-          to CSV, and define a monthly budget limit with visual progress
-          indicators. The application provides insights such as total spending,
-          average per day, top expenses, and category distribution through
-          interactive charts. Built with a mobile-first approach and responsive
-          UI. Backend implemented in .NET with a REST API, handling
-          authentication, business logic, and data persistence.
-        </ion-card-content>
+  <ion-card-content>
 
-        <ion-button expand="block" (click)="redirectToBudgetApp()">
-          Visit Project
-        </ion-button>
-      </ion-card>
+    <p class="project-description">
+      Full-stack budget and expense tracking application with authentication,
+      analytics, and budgeting features. Built with a mobile-first and
+      responsive UI.
+    </p>
+
+    <h4 class="section-title">Key Features</h4>
+    <ion-list lines="none" class="features-list">
+      <ion-item>
+        <ion-icon name="log-in-outline" slot="start"></ion-icon>
+        <ion-label>Secure authentication (Login / Register)</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="create-outline" slot="start"></ion-icon>
+        <ion-label>Add / Edit / Delete expenses</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="analytics-outline" slot="start"></ion-icon>
+        <ion-label>Analytics & insights with charts</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="wallet-outline" slot="start"></ion-icon>
+        <ion-label>Monthly budget limit with progress indicator</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="download-outline" slot="start"></ion-icon>
+        <ion-label>Export expenses to CSV</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <h4 class="section-title">Tech Stack</h4>
+    <div class="tech-chips">
+      <ion-chip color="primary">Angular</ion-chip>
+      <ion-chip color="primary">Ionic</ion-chip>
+      <ion-chip color="secondary">.NET</ion-chip>
+      <ion-chip color="secondary">REST API</ion-chip>
+      <ion-chip color="tertiary">PostgreSQL</ion-chip>
+      <ion-chip color="tertiary">ApexCharts</ion-chip>
+    </div>
+
+  </ion-card-content>
+
+  <ion-button expand="block" (click)="redirectToBudgetApp()">
+    Visit Project
+  </ion-button>
+</ion-card>
 
       <ion-card>
         <ion-card-header>

@@ -27,3 +27,33 @@ ion-button {
 ion-card-title {
     color: var(--header-text-color);
 }
+
+.project-description {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.section-title {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.features-list ion-item {
+  --padding-start: 0;
+  font-size: 0.9rem;
+}
+
+.features-list ion-icon {
+  color: var(--ion-color-primary);
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
