@@ -1,35 +1,53 @@
 ion-toolbar {
-    --background: var(--ion-toolbar-background, #ffffff);
-    --color: var(--ion-toolbar-color, #000000);
+  --background: var(--ion-toolbar-background, #ffffff);
+  --color: var(--ion-toolbar-color, #000000);
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
 ion-card {
-    margin: 20px;
-    border-radius: 12px;
-    border: 2px solid var(--ion-card-border-color, #2196f3);
+  margin: 0; 
+  border-radius: 12px;
+  border: 2px solid var(--ion-card-border-color, #2196f3);
 }
 
 ion-card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--header-text-color);
 }
 
 ion-card-content {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-ion-button {
-    margin-top: 10px;
-}
-
-
-ion-card-title {
-    color: var(--header-text-color);
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .project-btn {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+@media (min-width: 1100px) {
+  .projects-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page {
+    max-width: 1100px;
+  }
 }
